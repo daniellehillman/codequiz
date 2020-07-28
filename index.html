@@ -15,31 +15,35 @@
     <div class="container padding">
         <div class= "text1">
             <h2>Quiz</h2>
-            <p>Question: <text id="question1">0</text></p>
-            <p>Score: <text id="score1">0</text></p>
             <div id="count">Timer</div>
+            <div id ="result" class="hide"></div>
+            <!-- <div id ="wrong" class="hide">Wrong!</div>  -->
         </div>
         <hr>
+        <p>Score: <text id="score1">0</text></p>
         <div class= "text2">
         <div id= "answerButtons" class="btn button"> 
             <div id="number1">Question</div>
             <div id="allAnswers">
                 <button id="start" >Start Quiz</button>
               </div>
+              <button id="next" class="nextBtn hide" on click ="nextQ()">Next Question</button> 
             <hr>
-            <div id ="results" class="hide"></div>
+            <!-- <div id ="results" class="hide"></div> -->
             <!-- <div id ="right" class="hide">Correct</div> -->
-            <br>
+            <!-- <div id ="right" class="hide">Correct</div> -->
+          
             <!-- <button id="start" >Start Quiz</button>     -->
-            <button id="next" class="nextBtn hide" on click ="nextQ()">Next Question</button>  
-            <form id="userInfo" class="hide">
-                <input type= "text" class="username">
-                <input type= "submit">
-            </form>
-            <ul class= "scoreList hide"></ul>
+            <!-- <button id="next" class="nextBtn hide" on click ="nextQ()">Next Question</button>   -->
+        
         </div>
     
-</div>
+    </div> 
+    <form id="userInfo" class="hide">
+        <input type= "text" class="username">
+        <input type= "submit">
+    </form>
+    <ul class= "scoreList hide"></ul>
 </div>
 
 

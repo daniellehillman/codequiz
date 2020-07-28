@@ -262,6 +262,21 @@ function nextQ () {
   // } 
   
   
+
+  // setTimeout(()=> {
+
+  // if (currentIndex < myQuestions.length) {
+  //   document.getElementById('allAnswers').append('')
+  //   resultsElem.textContent = '' 
+  //   nextQ()
+  // } else {
+  
+
+  //   alert('game is over')
+  // }
+// }
+// , 1000)
+// }
   
   // if (event.target.classList.contains('test')) {
   //   if (myQuestions[0].correctAnswer === 'b') {

@@ -50,14 +50,17 @@ const startButton = document.getElementById('start')
 const nextButton = document.getElementById('next')
 const correct = document.getElementById('right')
 const wrong = document.getElementById('wrong')
+const button = document.querySelector('button')
 
 
 function nextQ () {
+
 
   document.getElementById('number1').textContent = myQuestions[currentIndex].question
   let answers = myQuestions[currentIndex].answers 
   
   document.getElementById('count').textContent = `${count} Seconds` 
+  document.getElementById('score1').textContent = `${score}` 
 
   document.getElementById('allAnswers').innerHTML = ''
 
@@ -70,16 +73,33 @@ function nextQ () {
     answerElem.textContent = answers[i] 
     document.getElementById('allAnswers').append(answerElem)
     nextButton.classList.add('hide') 
+  
   }
   
 }
 
 
+const gameOver =() => {
+  console.log('over')
+  nextButton.classList.add('hide')
+  clearInterval(myInterval)
+
+  // document.getElementById('userInfo').classList.remove('hide')
+  // document.getElementById('text2').innerHTML = `
+  //  hello
+  // `
+}
+
+function startQuiz() {
+
+  nextQ() 
+}
 
 document.getElementById('start').addEventListener('click', event => {
   event.preventDefault()
   startButton.classList.add('hide')
-  nextQ() 
+  startQuiz() 
+
 
   myInterval = setInterval(() => {
     count--
@@ -88,6 +108,7 @@ document.getElementById('start').addEventListener('click', event => {
     `
     if (count <= 0) {
       clearInterval(myInterval)
+      gameOver()
     }
   }, 1000)
 }
@@ -100,6 +121,15 @@ document.getElementById('next').addEventListener('click', event => {
 }
 )
 
+function quizLength () {
+  if (currentIndex < myQuestions.length) {
+      nextQ()
+    } else {
+      gameOver()
+    }
+
+}
+
 
 document.addEventListener('click', event => { 
 if (event.target.classList.contains('answer')) {
@@ -107,26 +137,34 @@ if (event.target.classList.contains('answer')) {
       console.log('Answer is Correct')
       let resultsElem = document.createElement('div')
       resultsElem.className = 'alert'
-      resultsElem.textContent = 'Correct!'
-      document.getElementById('allAnswers').append(resultsElem)
+      // correct.classList.remove('hide') 
+      // resultsElem.textContent = 'Correct!'
+      // nextButton.classList.remove('hide') 
+      // document.getElementById('result').innerHTML('Correct')
+      // document.getElementById('allAnswers').append(resultsElem)
       score ++
-  
+      
 } else {
   console.log('Answer is Incorrect')
   let resultsElem = document.createElement('div')
       resultsElem.className = 'alert'
-      resultsElem.textContent = 'Wrong!'
-      document.getElementById('allAnswers').append(resultsElem)
+      // resultsElem.textContent = 'Wrong!' 
+      // document.getElementById('allAnswers').append(resultsElem)
       count = count - 10
+      nextButton.classList.remove('hide')
+      // wrong.classList.remove('hide')
+      // document.getElementById('result').innerHTML('Wrong!')
+      
+    
 }
-currentIndex ++
+currentIndex ++ 
+quizLength()
 console.log(currentIndex)
-nextButton.classList.remove('hide')
+// quizLength()
+// nextButton.classList.remove('hide')
 
 
-
-
-}})
+// )
  
 // quinton's code 
 
@@ -147,3 +185,5 @@ return b.score - a.score
 
 
 }
+}}
+)
