@@ -23,19 +23,17 @@
         <div class= "text2">
         <div id= "answerButtons" class="btn button"> 
             <div id="number1">Question</div>
-            <button id ="A" class= "test hide 1"> <span class="Choices A"></span></button>
-            <button id ="B" class= "test hide 2"> <span class="Choices A"></span></button>
-            <button id ="C" class= "test hide 3"> <span class="Choices A"></span></button>
-            <button id ="D" class= "test hide 4"> <span class="Choices A"></span></button>
-    
-
+            <div id="allAnswers">
+                <!-- <button id="startTrivia" class="btn">Start Trivia Game</button> -->
+                <button id="start" >Start Quiz</button>
+              </div>
             <hr>
-            <div id ="wrong" class="hide">Wrong Answer</div>
-            <div id ="right" class="hide">Correct</div>
+            <div id ="results" class="hide"></div>
+            <!-- <div id ="right" class="hide">Correct</div> -->
             <br>
-            <button id="start" >Start Quiz</button>
+            <!-- <button id="start" >Start Quiz</button>     -->
 
-            <button id="next" class="nextBtn hide" on click ="nextQuestion()">Next Question</button>  
+            <button id="next" class="nextBtn hide" on click ="nextQ()">Next Question</button>  
         </div>
     
 </div>
