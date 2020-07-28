@@ -117,6 +117,7 @@ if (event.target.classList.contains('answer')) {
       resultsElem.className = 'alert'
       resultsElem.textContent = 'Wrong!'
       document.getElementById('allAnswers').append(resultsElem)
+      count = count - 10
 }
 currentIndex ++
 console.log(currentIndex)
@@ -125,26 +126,14 @@ nextButton.classList.remove('hide')
 
 
 
-// setTimeout(()=> {
-
-  // if (currentIndex < myQuestions.length) {
-  //   document.getElementById('allAnswers').append('')
-  //   resultsElem.textContent = '' 
-  //   nextQ()
-  // } else {
-  
-
-  //   alert('game is over')
-  // }
-// }
-// , 1000)
-// }
 }})
  
 // quinton's code 
+
+
 const getScore = submission => {
 
-console.log(submission)
+// console.log(submission)
 
 let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || []
 leaderboard.push(submission)
