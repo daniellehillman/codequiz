@@ -80,8 +80,8 @@ const gameOver =() => {
   document.getElementById('number1').classList.add('hide')
   clearInterval(myInterval)
   document.getElementById('allAnswers').innerHTML = `
-  <h1 class="game">The game has ended!</h1>
-  <p class="over">Your score: ${score}</p>
+  <h1 class="gameDone">The game has ended!</h1>
+  <p class="finalScore">Your score: ${score}</p>
   <hr class="my-4">
   <form>
     <div class=" form form-group">
