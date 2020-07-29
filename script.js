@@ -103,7 +103,7 @@ const gameOver =() => {
   <form>
     <div class=" form form-group">
       <label for="username">Please choose a username for yourself</label>
-      <input type="text" class="form-control" id="username">
+      <input type="text" class="form-control" id="username" onfocus="this.value=''">
       <button id="userInfo" class="btn">Submit</button>
     </div>
   </form>
