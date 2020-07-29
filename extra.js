@@ -702,6 +702,40 @@ startGame(0)
 
   
   
+
+// document.addEventListener('click', event => {
+//   if (event.target.classList.contains('answer')) {
+//     (event.target.dataset.answer)
+//   } else if (event.target.id === 'submitScore') {
+//     event.preventDefault()
+//     submitScore({
+//       username: document.getElementById('username').value,
+//       score: score
+//     })
+//   }
+// })
+
+
+}}
+)
+
+// document.addEventListener('click', event => {
+
+// if (event.target.id === 'userInfo') {
+// event.preventDefault()
+// console.log('hi')
+// getScore()
+
+// // userInfo() 
+
+//   // { Name: document.getElementById('username').value,
+//   // Score: score }
+
+// }
+
+
+
+// })
   
   
   
